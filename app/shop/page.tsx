@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Shop() {
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const products = [
-    {
+    { 
       image: "/images/coord1.jpg.jpg",
       name: "Elegant Co-ord Set",
       category: "Co-ord Set",
@@ -63,13 +68,36 @@ export default function Shop() {
 
       </section>
 
-
+{/* Category Filter */}
+<div className="max-w-7xl mx-auto px-6 pb-10 flex flex-wrap justify-center gap-3">
+  {["All", "Kurti", "Co-ord Set", "Suit Set", "New Arrival"].map(
+    (category) => (
+      <button
+        key={category}
+        onClick={() => setSelectedCategory(category)}
+        className={`px-6 py-3 rounded-full font-medium transition ${
+          selectedCategory === category
+            ? "bg-[#C96F4A] text-white"
+            : "bg-white text-gray-700 hover:bg-[#C96F4A] hover:text-white"
+        }`}
+      >
+        {category}
+      </button>
+    )
+  )}
+</div>
       {/* Products */}
-      <section className="max-w-7xl mx-auto px-6 pb-20">
+            <section className="max-w-7xl mx-auto px-6 pb-20">
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-          {products.map((product) => (
+          {products
+  .filter(
+    (product) =>
+      selectedCategory === "All" ||
+      product.category === selectedCategory
+  )
+  .map((product) => (
 
             <div
               key={product.name}
