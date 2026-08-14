@@ -60,26 +60,65 @@ export default function Home() {
 
           <div className="text-center text-white px-6">
 
+            {/* Luxury Script Brand Name */}
+            <div className="text-center mb-5">
+
+              <h1
+                className="text-6xl md:text-8xl tracking-wide"
+                style={{
+                  fontFamily: "'Brush Script MT', 'Segoe Script', cursive",
+                  fontWeight: "400",
+                }}
+              >
+                Cloriddh
+              </h1>
+
+              {/* By Riddhima Creations */}
+              <p className="mt-1 text-sm md:text-base tracking-[4px] font-medium">
+                BY RIDDHIMA CREATIONS
+              </p>
+
+              {/* Luxury Divider */}
+              <div className="flex items-center justify-center gap-3 mt-3">
+                <span className="w-16 md:w-24 h-px bg-[#F8E6C8]/80"></span>
+
+                <span className="text-[#F8E6C8] text-lg">
+                  ✦
+                </span>
+
+                <span className="w-16 md:w-24 h-px bg-[#F8E6C8]/80"></span>
+              </div>
+
+            </div>
+
+
+            {/* Premium Fashion */}
             <p className="uppercase tracking-[6px] text-sm md:text-lg font-semibold">
               Premium Women's Fashion
             </p>
 
+
+            {/* Main Tagline */}
             <h2 className="text-4xl md:text-6xl font-bold mt-4">
               Elegance In
               <br />
               Every Thread
             </h2>
 
+
+            {/* Categories */}
             <p className="mt-5 text-base md:text-xl">
               Kurtis • Co-ord Sets • Ethnic Wear
             </p>
 
+
+            {/* Shop Button */}
             <a
-  href="/shop"
-  className="mt-7 bg-[#C96F4A] hover:bg-[#b65f40] px-10 py-4 rounded-xl text-lg font-semibold text-white inline-block"
->
-  Shop Now
-</a>
+              href="/shop"
+              className="mt-7 bg-[#C96F4A] hover:bg-[#B65F40] px-10 py-4 rounded-xl text-lg font-semibold text-white inline-block shadow-lg transition"
+            >
+              Shop Now
+            </a>
 
           </div>
 
