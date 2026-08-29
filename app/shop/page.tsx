@@ -1,35 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { products } from "@/lib/products";
 
 export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const products = [
-    { 
-      image: "/images/coord1.jpg.jpg",
-      name: "Elegant Co-ord Set",
-      category: "Co-ord Set",
-      price: "₹1,299",
-    },
-    {
-      image: "/images/coord2.jpg.jpg",
-      name: "Premium Women's Kurti",
-      category: "Kurti",
-      price: "₹999",
-    },
-    {
-      image: "/images/coord3.jpg.jpg",
-      name: "Elegant Suit Set",
-      category: "Suit Set",
-      price: "₹1,499",
-    },
-    {
-      image: "/images/coord4.jpg.jpg",
-      name: "New Arrival",
-      category: "New Arrival",
-      price: "₹1,799",
-    },
-  ];
+
+  const categories = ["All", "Kurtis", "Co-ord Sets", "Bottom Wear"];
+
+  const filteredProducts =
+    selectedCategory === "All"
+      ? products
+      : products.filter((product) => product.category === selectedCategory);
 
   return (
     <main className="min-h-screen bg-[#F8F3ED]">
@@ -50,7 +32,6 @@ export default function Shop() {
         </div>
       </header>
 
-
       {/* Shop Heading */}
       <section className="max-w-7xl mx-auto px-6 py-16 text-center">
 
@@ -68,90 +49,126 @@ export default function Shop() {
 
       </section>
 
-{/* Category Filter */}
-<div className="max-w-7xl mx-auto px-6 pb-10 flex flex-wrap justify-center gap-3">
-  {["All", "Kurti", "Co-ord Set", "Suit Set", "New Arrival"].map(
-    (category) => (
-      <button
-        key={category}
-        onClick={() => setSelectedCategory(category)}
-        className={`px-6 py-3 rounded-full font-medium transition ${
-          selectedCategory === category
-            ? "bg-[#C96F4A] text-white"
-            : "bg-white text-gray-700 hover:bg-[#C96F4A] hover:text-white"
-        }`}
-      >
-        {category}
-      </button>
-    )
-  )}
-</div>
+      {/* Category Filter */}
+      <div className="max-w-7xl mx-auto px-6 pb-10 flex flex-wrap justify-center gap-3">
+
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`px-6 py-3 rounded-full font-medium transition ${
+              selectedCategory === category
+                ? "bg-[#C96F4A] text-white"
+                : "bg-white text-gray-700 hover:bg-[#C96F4A] hover:text-white"
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+
+      </div>
+
       {/* Products */}
-            <section className="max-w-7xl mx-auto px-6 pb-20">
+      <section className="max-w-7xl mx-auto px-6 pb-20">
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-          {products
-  .filter(
-    (product) =>
-      selectedCategory === "All" ||
-      product.category === selectedCategory
-  )
-  .map((product) => (
+          {filteredProducts.map((product) => {
 
-            <div
-              key={product.name}
-              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
-            >
+            const firstImage = product.colors[0]?.images[0];
 
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-[430px] object-cover"
-              />
+            return (
+              <div
+                key={product.id}
+                className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition"
+              >
 
-              <div className="p-5">
+                {/* Product Image */}
+                <a href={`/product/${product.id}`}>
 
-                <p className="text-sm text-gray-500">
-                  {product.category}
-                </p>
+                  {firstImage ? (
+                    <img
+                      src={firstImage}
+                      alt={product.name}
+                      className="w-full h-[430px] object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-[430px] bg-gray-200 flex items-center justify-center text-gray-500">
+                      No Image
+                    </div>
+                  )}
 
-                <h2 className="text-xl font-semibold mt-1">
-                  {product.name}
-                </h2>
+                </a>
 
-                <p className="text-[#C96F4A] text-xl font-bold mt-2">
-                  {product.price}
-                </p>
+                {/* Product Information */}
+                <div className="p-5">
 
-<a
-  href={
-    "https://wa.me/918078620650?text=" +
-    encodeURIComponent(
-      "Hello CLORIDDH, I am interested in " +
-      product.name +
-      " priced at " +
-      product.price +
-      ". Please share more details."
-    )
-  }
-  target="_blank"
-  rel="noopener noreferrer"
-  className="block w-full mt-4 bg-[#C96F4A] text-white py-3 rounded-xl hover:bg-[#B85F3E] text-center"
->
-  Order on WhatsApp
-</a>
+                  <p className="text-sm text-gray-500">
+                    {product.category}
+                  </p>
+
+                  <a href={`/product/${product.id}`}>
+                    <h2 className="text-xl font-semibold mt-1 hover:text-[#C96F4A] transition">
+                      {product.name}
+                    </h2>
+                  </a>
+
+                  <p className="text-[#C96F4A] text-xl font-bold mt-2">
+                    ₹{product.price.toLocaleString("en-IN")}
+                  </p>
+
+                  {/* Available Colours */}
+                  {product.colors.length > 0 && (
+                    <div className="mt-3">
+                      <p className="text-sm text-gray-500">
+                        {product.colors.length === 1
+                          ? `Colour: ${product.colors[0].name}`
+                          : `${product.colors.length} Colours Available`}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* View Product */}
+                  <a
+                    href={`/product/${product.id}`}
+                    className="block w-full mt-4 bg-[#C96F4A] text-white py-3 rounded-xl hover:bg-[#B85F3E] text-center transition"
+                  >
+                    View Product
+                  </a>
+
+                  {/* WhatsApp */}
+                  <a
+                    href={
+                      "https://wa.me/918078620650?text=" +
+                      encodeURIComponent(
+                        `Hello CLORIDDH, I am interested in ${product.name}. Please share more details.`
+                      )
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full mt-2 border border-[#C96F4A] text-[#C96F4A] py-3 rounded-xl hover:bg-[#C96F4A] hover:text-white text-center transition"
+                  >
+                    Order on WhatsApp
+                  </a>
+
+                </div>
 
               </div>
-
-            </div>
-
-          ))}
+            );
+          })}
 
         </div>
 
-      </section>
+        {/* No Products */}
+        {filteredProducts.length === 0 && (
+          <div className="text-center py-20">
+            <p className="text-gray-500 text-lg">
+              No products found in this category.
+            </p>
+          </div>
+        )}
 
+      </section>
 
       {/* Footer */}
       <footer className="bg-[#C96F4A] text-white py-10">
