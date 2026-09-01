@@ -114,10 +114,10 @@ export const products: Product[] = [
       {
         name: "candy pink",
         images: [
-  "/Product images/CLD-006/CLD-006 front.jpg",
-  "/Product images/CLD-006/CLD-006 side.jpg",
-  "/Product images/CLD-006/CLD-006 back.jpg",
-  "/Product images/CLD-006/CLD-006 detail.jpg",
+  "/Product images/CLD-006/CLD-006 front.JPG",
+  "/Product images/CLD-006/CLD-006 side.JPG",
+  "/Product images/CLD-006/CLD-006 back.JPG",
+  "/Product images/CLD-006/CLD-006 detail.JPG",
 ],
       },
     ],
@@ -134,10 +134,10 @@ export const products: Product[] = [
       {
         name: "magenta pink",
         images: [
-  "/Product images/CLD-007/CLD-007 front.jpg",
-  "/Product images/CLD-007/CLD-007 side.jpg",
-  "/Product images/CLD-007/CLD-007 back.jpg",
-  "/Product images/CLD-007/CLD-007 detail.jpg",
+  "/Product images/CLD-007/CLD-007 front.JPG",
+  "/Product images/CLD-007/CLD-007 side.JPG",
+  "/Product images/CLD-007/CLD-007 back.JPG",
+  "/Product images/CLD-007/CLD-007 detail.JPG",
         ],
       },
     ],
@@ -154,10 +154,10 @@ export const products: Product[] = [
       {
         name: "rust",
         images: [
-  "/Product images/CLKS-004/CLKS-004 front.jpg",
-  "/Product images/CLKS-004/CLKS-004 side.jpg",
-  "/Product images/CLKS-004/CLKS-004 back.jpg",
-  "/Product images/CLKS-004/CLKS-004 detail.jpg",
+  "/Product images/CLKS-004/CLKS-004 front.JPG",
+  "/Product images/CLKS-004/CLKS-004 side.JPG",
+  "/Product images/CLKS-004/CLKS-004 back.JPG",
+  "/Product images/CLKS-004/CLKS-004 detail.JPG",
 ],
       },
     ],
@@ -174,10 +174,10 @@ export const products: Product[] = [
       {
         name: "coral pink",
         images: [
-  "/Product images/CLKS-005/CLKS-005 front.jpg",
-  "/Product images/CLKS-005/CLKS-005 side.jpg",
-  "/Product images/CLKS-005/CLKS-005 back.jpg",
-  "/Product images/CLKS-005/CLKS-005 detail.jpg",
+  "/Product images/CLKS-005/CLKS-005 front.JPG",
+  "/Product images/CLKS-005/CLKS-005 side.JPG",
+  "/Product images/CLKS-005/CLKS-005 back.JPG",
+  "/Product images/CLKS-005/CLKS-005 detail.JPG",
 ],
       },
     ],
