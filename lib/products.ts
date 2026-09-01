@@ -107,7 +107,7 @@ export const products: Product[] = [
     id: "CLD-006",
     name: "CLD-006",
     category: "dress",
-    price: 0,
+    price: 799,
     description: "Premium CLORIDDH bottom wear.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
