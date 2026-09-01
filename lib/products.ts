@@ -106,7 +106,7 @@ export const products: Product[] = [
   {
     id: "CLD-006",
     name: "CLD-006",
-    category: "dress",
+    category: "Dress",
     price: 799,
     description: "Premium CLORIDDH Dress.",
     sizes: ["S", "M", "L", "XL", "XXL"],
@@ -126,7 +126,7 @@ export const products: Product[] = [
   {
     id: "CLD-007",
     name: "CLD-007",
-    category: "dress",
+    category: "Dress",
     price: 799,
     description: "Premium CLORIDDH Dress.",
     sizes: ["S", "M", "L", "XL", "XXL"],
