@@ -6,7 +6,7 @@ import { products } from "@/lib/products";
 export default function Shop() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Kurtis", "Co-ord Sets", "Bottom Wear"];
+  const categories = ["All", "Kurtis", "Co-ord Sets", "Dress"];
 
   const filteredProducts =
     selectedCategory === "All"
