@@ -18,12 +18,12 @@ export const products: Product[] = [
     id: "CLCS-001",
     name: "CLCS-001",
     category: "Co-ord Sets",
-    price: 0,
+    price: 1099,
     description: "Premium CLORIDDH co-ord set.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
       {
-        name: "Default",
+        name: "offwhite",
         images: [
           "/Product images/CLCS-001/front.jpg",
           "/Product images/CLCS-001/side.jpg",
@@ -38,7 +38,7 @@ export const products: Product[] = [
     id: "CLCS-002",
     name: "CLCS-002",
     category: "Co-ord Sets",
-    price: 0,
+    price: 999,
     description: "Premium CLORIDDH co-ord set available in two colours.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
@@ -67,12 +67,12 @@ export const products: Product[] = [
     id: "CLCS-003",
     name: "CLCS-003",
     category: "Co-ord Sets",
-    price: 0,
+    price: 799,
     description: "Premium CLORIDDH co-ord set.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
       {
-        name: "Default",
+        name: "blue & purple",
         images: [
           "/Product images/CLCS-003/front.jpg",
           "/Product images/CLCS-003/side.jpg",
@@ -87,12 +87,12 @@ export const products: Product[] = [
     id: "CLCS-008",
     name: "CLCS-008",
     category: "Co-ord Sets",
-    price: 0,
+    price: 799,
     description: "Premium CLORIDDH co-ord set.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
       {
-        name: "Default",
+        name: "offwhite base with slate grey",
         images: [
           "/Product images/CLCS-008/front.jpg",
           "/Product images/CLCS-008/side.jpg",
@@ -106,13 +106,13 @@ export const products: Product[] = [
   {
     id: "CLD-006",
     name: "CLD-006",
-    category: "Bottom Wear",
+    category: "dress",
     price: 0,
     description: "Premium CLORIDDH bottom wear.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
       {
-        name: "Default",
+        name: "candy pink",
         images: [
           "/Product images/CLD-006/front.jpg",
           "/Product images/CLD-006/side.jpg",
@@ -126,13 +126,13 @@ export const products: Product[] = [
   {
     id: "CLD-007",
     name: "CLD-007",
-    category: "Bottom Wear",
-    price: 0,
+    category: "dress",
+    price: 799,
     description: "Premium CLORIDDH bottom wear.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
       {
-        name: "Default",
+        name: "magenta pink",
         images: [
           "/Product images/CLD-007/front.jpg",
           "/Product images/CLD-007/side.jpg",
@@ -147,12 +147,12 @@ export const products: Product[] = [
     id: "CLKS-004",
     name: "CLKS-004",
     category: "Kurtis",
-    price: 0,
+    price: 899,
     description: "Premium CLORIDDH kurti.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
       {
-        name: "Default",
+        name: "rust",
         images: [
           "/Product images/CLKS-004/front.jpg",
           "/Product images/CLKS-004/side.jpg",
@@ -167,12 +167,12 @@ export const products: Product[] = [
     id: "CLKS-005",
     name: "CLKS-005",
     category: "Kurtis",
-    price: 0,
+    price: 899,
     description: "Premium CLORIDDH kurti.",
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: [
       {
-        name: "Default",
+        name: "coral pink",
         images: [
           "/Product images/CLKS-005/front.jpg",
           "/Product images/CLKS-005/side.jpg",
