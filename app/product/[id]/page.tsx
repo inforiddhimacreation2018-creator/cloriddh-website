@@ -222,7 +222,7 @@ function ProductContent({
                     }`}
                     title={color.name}
                   >
-                    <span className="block w-full h-full rounded-full bg-gray-700" />
+                    <span className="block w-full h-full rounded-full bg-[#F5F0E8]" />
                   </button>
                 ))}
               </div>
