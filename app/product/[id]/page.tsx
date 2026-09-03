@@ -164,15 +164,18 @@ function ProductContent({
               {product.name}
             </h1>
 
-            {/* RATING */}
-            <div className="flex items-center gap-3 mt-5">
-              <span className="bg-gray-900 text-white px-2 py-1 text-sm">
-                4.8 ★
-              </span>
-              <span className="text-sm text-gray-600">
-                5 Ratings
-              </span>
-            </div>
+           {/* RATING */}
+<a
+  href="#reviews"
+  className="flex items-center gap-3 mt-5 w-fit cursor-pointer"
+>
+  <span className="bg-gray-900 text-white px-2 py-1 text-sm">
+    4.8 ★
+  </span>
+  <span className="text-sm text-gray-600 underline">
+    5 Ratings
+  </span>
+</a>
 
             {/* PRICE */}
             <div className="mt-6">
@@ -296,6 +299,43 @@ function ProductContent({
         {/* DETAILS */}
         <section className="mt-16 border-t border-gray-300 pt-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* REVIEWS */}
+<section id="reviews" className="mt-16 border-t pt-10">
+  <h2 className="text-xl font-medium tracking-wide">
+    CUSTOMER REVIEWS
+  </h2>
+
+  <div className="mt-6 flex items-center gap-4">
+    <span className="bg-gray-900 text-white px-3 py-2 text-lg">
+      4.8 ★
+    </span>
+    <span className="text-sm text-gray-600">
+      Based on 5 Ratings
+    </span>
+  </div>
+
+  <div className="mt-8 space-y-6">
+    <div className="border-b pb-5">
+      <p className="font-medium">★★★★★</p>
+      <p className="mt-2 text-sm text-gray-700">
+        Beautiful product and good quality.
+      </p>
+      <p className="mt-2 text-xs text-gray-500">
+        Verified Customer
+      </p>
+    </div>
+
+    <div className="border-b pb-5">
+      <p className="font-medium">★★★★★</p>
+      <p className="mt-2 text-sm text-gray-700">
+        Loved the fit and fabric.
+      </p>
+      <p className="mt-2 text-xs text-gray-500">
+        Verified Customer
+      </p>
+    </div>
+  </div>
+</section>
             {/* DESCRIPTION */}
             <div>
               <h2 className="text-xl font-medium text-[#C96F4A]">
